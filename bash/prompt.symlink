@@ -1,0 +1,16 @@
+export CLICOLOR=1
+LSCOLORS="cxfxexdxbxegedabagacad"
+export LSCOLORS
+
+# function to compute the current git branch
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# colors
+VIOLET="\[\033[01;35m\]"
+YELLOW="\[\033[01;33m\]"
+CYAN="\[\033[01;36m\]"
+CYAN_SLIM="\[\033[00;36m\]"
+
+PS1="$YELLOW\$(parse_git_branch)${debian_chroot:+($debian_chroot)}$VIOLET\u:$CYAN\w $CYAN_SLIM$ "
