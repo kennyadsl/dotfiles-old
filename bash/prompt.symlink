@@ -7,10 +7,27 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-# colors
-VIOLET="\[\033[01;35m\]"
-YELLOW="\[\033[01;33m\]"
-CYAN="\[\033[01;36m\]"
-CYAN_SLIM="\[\033[00;36m\]"
+# Reset
+Color_Off='\e[0m'       # Text Reset
 
-PS1="$YELLOW\$(parse_git_branch)${debian_chroot:+($debian_chroot)}$VIOLET\u:$CYAN\w $CYAN_SLIM$ "
+# Regular Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+# High Intensty
+IBlack='\e[0;90m'       # Black
+IRed='\e[0;91m'         # Red
+IGreen='\e[0;92m'       # Green
+IYellow='\e[0;93m'      # Yellow
+IBlue='\e[0;94m'        # Blue
+IPurple='\e[0;95m'      # Purple
+ICyan='\e[0;96m'        # Cyan
+IWhite='\e[0;97m'       # White
+
+PS1="$IYellow\$(parse_git_branch) ${debian_chroot:+($debian_chroot)}$IBlue\u:$ICyan\w $IWhite$ "
