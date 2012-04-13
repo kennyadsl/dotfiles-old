@@ -2,7 +2,14 @@ require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
 task :install do
-  linkables = Dir.glob('*/**{.symlink}')
+
+  linkables = Dir.glob(File.join(Dir.home, 'dotfiles', '*/**{.symlink}'))
+
+  # Add dropbox configuration if present
+  dropbox_conf = File.join(Dir.home, "Dropbox/Config/dotfiles")
+  if File.exists?(dropbox_conf) && File.directory?(dropbox_conf)
+    linkables |= Dir.glob(dropbox_conf+'/**/*{.symlink}')
+  end
 
   skip_all = false
   overwrite_all = false
@@ -30,7 +37,7 @@ task :install do
       FileUtils.rm_rf(target) if overwrite || overwrite_all
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
-    `ln -s "$PWD/#{linkable}" "#{target}"`
+    `ln -s "#{linkable}" "#{target}"`
   end
 end
 
