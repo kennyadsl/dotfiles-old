@@ -4,7 +4,7 @@ export LSCOLORS
 
 # function to compute the current git branch
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
 # Reset
@@ -30,4 +30,4 @@ IPurple='\e[0;95m'      # Purple
 ICyan='\e[0;96m'        # Cyan
 IWhite='\e[0;97m'       # White
 
-PS1="$IYellow\$(parse_git_branch) ${debian_chroot:+($debian_chroot)}$IBlue\u:$ICyan\w $IWhite$ "
+PS1="$IYellow\$(parse_git_branch)${debian_chroot:+($debian_chroot)}$IBlue\u:$ICyan\w $IWhite$ "
