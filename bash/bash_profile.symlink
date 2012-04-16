@@ -21,9 +21,10 @@ if [ -x /usr/local/bin/brew ]; then
   fi
 fi
 
+# Append to the bash history file, rather than overwriting it
+shopt -s histappend
+
 # RVM stuff
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 
-# Append to the bash history file, rather than overwriting it
-shopt -s histappend
