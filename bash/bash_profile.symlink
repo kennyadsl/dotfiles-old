@@ -14,8 +14,8 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Enable git Bash Completion if Brew is installed
-if [ -x /path/to/programname ]; then
+# Enable git Bash Completion if Homebrew is available
+if [ -x /usr/local/bin/brew ]; then
   if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
   fi
