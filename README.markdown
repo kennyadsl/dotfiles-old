@@ -1,6 +1,14 @@
-## My dotfiles
+## My dotfiles (OS X, BASH, GIT, RVM)
 
-Rakefile install script and many other things, are inspired (copied somewhere) from the [Holman dotfiles repo](https://github.com/holman/dotfiles)
+#### What's inside?
+
+- rvm 
+- git (gitignore)
+- git Bash completion (for homebrew users)
+- git UTF-8 fix for Lion
+- print current git branch in the bash prompt
+
+Rakefile install script and many other things are inspired (also copied) from the [Holman dotfiles repo](https://github.com/holman/dotfiles)
 
 ### install
 
@@ -12,20 +20,21 @@ The install rake task will symlink the appropriate files in `.dotfiles` to your
 home directory. Everything is configured and tweaked within `~/.dotfiles`,
 though.
 
-You can also create a folder into your Dropbox folder to keep *secret* dotfiles.
-Default is ~/Dropbox/Config/dotfiles but you can customize it into the Rakefile
+### Dropbox config files
+You can also create a folder into your Dropbox folder to keep your *private* dotfiles.
+Default is ~/Dropbox/Config/dotfiles customizable from the Rakefile
 
 ### Project switcher with folder autocompletion and gemset automatic switch (WIP)
 
-#### Assumption ( Edit code if you want to change this stuff )
+#### How does it works ( Edit code if you want to change this stuff )
 
 - You have your projects in `~/Code/`
 - You are working with rvm
 - You have a gemset specific for each project (named as project folder)
 
-##### Example
-I have a project named `my_project` into the folder `~/Code/my_project` using the gemset `my_project` :D
+For example, you have a project named `my_project` into the folder `~/Code/my_project` using the gemset `my_project` :D
 
-I can do `proj my_project` to switch to that folder with the right rvm gemset. 
+You can launch anywhere in your system `proj my_project` to switch to that folder with the right rvm gemset. 
+
 
 
