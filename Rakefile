@@ -3,10 +3,10 @@ require 'rake'
 desc "Hook our dotfiles into system-standard positions."
 task :install do
 
-  linkables = Dir.glob(File.join(Dir.home, '.dotfiles', '*/**{.symlink}'))
+  linkables = Dir.glob(File.join(ENV["HOME"], '.dotfiles', '*/**{.symlink}'))
 
   # Add dropbox configuration if present
-  dropbox_conf = File.join(Dir.home, "Dropbox/Config/dotfiles")
+  dropbox_conf = File.join(ENV["HOME"], "Dropbox/Config/dotfiles")
   if File.exists?(dropbox_conf) && File.directory?(dropbox_conf)
     linkables |= Dir.glob(dropbox_conf+'/**/*{.symlink}')
   end
