@@ -1,3 +1,7 @@
+alias l="ls -G"
 alias ls="ls -G"
+alias ll="ls -lG"
+alias la="ls -aG"
+alias lla="ls -laG"
 
 alias proj=". $HOME/.dotfiles/scripts/proj.sh"
