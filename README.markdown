@@ -34,7 +34,10 @@ Default is ~/Dropbox/Config/dotfiles customizable from the Rakefile
 
 For example, you have a project named `my_project` into the folder `~/Code/my_project` using the gemset `my_project` :D
 
-You can launch anywhere in your system `proj my_project` to switch to that folder with the right rvm gemset. 
+You can launch anywhere in your system `proj my_project` to switch to that folder with the right rvm gemset. This will use
+the MRI 1.9.2 by default. If you want, you can run `proj my_project@my_ruby` to select a specific ruby version.
 
-
+The script will ask you a repository url to run `git clone` if a directory with the project name is not found.
+The same will happen for the ruby version; if the ruby version is not installed, you will be asked if you want to run 
+`rvm install my_ruby`.
 
