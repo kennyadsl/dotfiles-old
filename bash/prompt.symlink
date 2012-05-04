@@ -31,3 +31,8 @@ ICyan='\[\e[0;96m\]'        # Cyan
 IWhite='\[\e[0;97m\]'       # White
 
 PS1="$IYellow\$(parse_git_branch)${debian_chroot:+($debian_chroot)}$IBlue\u:$ICyan\w$IWhite$ "
+
+# ANSI escape code to prevent character shift typing Crtl-C
+# http://jonisalonen.com/2012/your-bash-prompt-needs-this/
+ANSI_ESCAPE_CODE='\[\033[G\]'
+PS1="$ANSI_ESCAPE_CODE$PS1"
