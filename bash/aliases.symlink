@@ -8,3 +8,5 @@ alias lla="ls -laG"
 alias dotfiles="(cd ~/.dotfiles && git pull && source ~/.bash_profile)"
 
 alias proj=". $HOME/.dotfiles/scripts/proj.sh"
+
+alias mongodb="mongod run --config /usr/local/etc/mongod.conf"
