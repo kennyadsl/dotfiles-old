@@ -1,0 +1,6 @@
+set mouse=a
+
+" Custom mapping
+"
+" Ctrl-c -> copy selected text to osx clipboard
+map <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
