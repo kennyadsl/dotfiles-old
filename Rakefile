@@ -39,6 +39,37 @@ task :install do
     end
     `ln -s "#{linkable}" "#{target}"`
   end
+
+  # Sublime Text 2 Configuration
+  subl_library_dir = Dir.glob(File.join(ENV["HOME"], "Library/Application\ Support/Sublime\ Text\ 2"))
+  subl_dotfiles_dir = Dir.glob(File.join(ENV["HOME"], ".dotfiles/Sublime\ Text\ 2"))
+  subl_configuration_dirs = ["Installed\ Packages", "Packages", "Pristine\ Packages"]
+
+  subl_skip_all = false
+  subl_overwrite_all = false
+
+  subl_configuration_dirs.each do |dir|
+    overwrite = false
+    subl_overwrite = false
+
+    subl_library_path = File.join(subl_library_dir, dir)
+    subl_dotfiles_path = File.join(subl_dotfiles_dir, dir)
+
+    subl_overwrite = false
+    if File.exists?(subl_library_path) || File.symlink?(subl_library_path)
+      unless subl_skip_all || subl_overwrite_all
+        puts "Sublime Text 2 configuration already exists: #{subl_library_path}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all"
+        case STDIN.gets.chomp
+        when 'o' then subl_overwrite = true
+        when 'O' then subl_overwrite_all = true
+        when 'S' then subl_skip_all = true
+        when 's' then next
+        end
+      end
+      FileUtils.rm_rf(subl_library_path) if subl_overwrite || subl_overwrite_all
+    end
+  `ln -s "#{subl_dotfiles_path}" "#{subl_library_path}"`
+  end
 end
 
 task :uninstall do
