@@ -34,7 +34,7 @@ $ proj project_name
 
 or, if you want to use a specific gemset:
 
-```
+```bash
 $ proj project_name@1.9.3-p125
 ```
 
