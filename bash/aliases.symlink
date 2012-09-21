@@ -4,6 +4,8 @@ alias ll="ls -lG"
 alias la="ls -aG"
 alias lla="ls -laG"
 alias be="bundle exec"
+alias bo="bundle open"
+alias bs="bundle show"
 alias gs="git s"
 
 # Update dotfiles

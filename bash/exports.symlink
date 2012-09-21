@@ -1,6 +1,9 @@
 # Make vim the default editor
 export EDITOR="vim"
 
+# Use Sublime text to open gems
+export BUNDLER_EDITOR="subl"
+
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less -X"
 # Colors for Man Pages
