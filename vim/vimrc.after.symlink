@@ -4,4 +4,3 @@ set mouse=a
 "
 " Ctrl-c -> copy selected text to osx clipboard
 map <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
-color github
