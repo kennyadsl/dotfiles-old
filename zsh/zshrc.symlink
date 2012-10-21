@@ -34,4 +34,4 @@ plugins=(bundle git github osx ruby rails3 rvm sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/kennyadsl/.rvm/gems/ruby-1.9.3-p286@farmapanel/bin:/Users/kennyadsl/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/kennyadsl/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/kennyadsl/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/Users/kennyadsl/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/kennyadsl/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/kennyadsl/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
