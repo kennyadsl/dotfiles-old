@@ -1,4 +1,4 @@
-## My dotfiles (OS X, bash, git, RVM, Vim, Sublime Text 2)
+## My dotfiles (OS X, zsh, git, RVM, Vim, Sublime Text 2)
 
 ###### What's inside?
 
@@ -23,34 +23,3 @@ home directory. Everything is configured and tweaked within `~/.dotfiles`, thoug
 ### Dropbox configuration files
 You can also create a folder into your Dropbox folder to keep your *private* dotfiles.
 Default is ~/Dropbox/Config/dotfiles customizable from the Rakefile.
-
-### Proj: easy ruby projects switcher
-
-#### Usage
-
-```bash
-$ proj project_name
-```
-
-or, if you want to use a specific gemset:
-
-```bash
-$ proj project_name@1.9.3-p125
-```
-
-#### What does it do?
-
-- Go to project_name folder
-- Switch to @project_name gemset
-
-It will use the MRI 1.9.2 by default.  
-The script will ask you a repository url to run `git clone` if a directory with the project name is not found.
-The same will happen for the ruby version; if the ruby version is not installed, you will be asked if you want to run 
-`rvm install my_ruby`.
-
-#### Requirements
-
-- You are working with RVM
-- You have your projects in `~/Code/` folder
-- You have a specific gemset for each project (named as the project folder)
-
