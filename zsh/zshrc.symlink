@@ -10,3 +10,4 @@ source $ZSH/oh-my-zsh.sh
 cdpath=(~/Code/)
 
 export PATH=~/.rvm/gems/ruby-1.9.3-p286@global/bin:~/.rvm/rubies/ruby-1.9.3-p286/bin:~/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export EDITOR=subl
