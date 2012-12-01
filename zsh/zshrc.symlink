@@ -7,7 +7,7 @@ plugins=(bundler git github osx ruby rails3 rvm sublime)
 
 source $ZSH/oh-my-zsh.sh
 
-cdpath=(~/Code/)
-
-export PATH=~/.rvm/gems/ruby-1.9.3-p286@global/bin:~/.rvm/rubies/ruby-1.9.3-p286/bin:~/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.rvm/bin
 export EDITOR=subl
+
+cdpath=(~/Code/)
