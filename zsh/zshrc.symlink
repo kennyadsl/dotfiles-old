@@ -6,6 +6,7 @@ alias pulsar="pulsar cap -c git@github.com:nebulab/pulsar-conf.git"
 alias be="bundle exec"
 alias bo="bundle open"
 alias bs="bundle show"
+alias fs="foreman start"
 alias rvm@="rvm gemset use `basename $PWD`"
 
 plugins=(bundler git github osx ruby rails3 rvm sublime)
