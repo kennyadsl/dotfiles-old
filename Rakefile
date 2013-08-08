@@ -11,7 +11,7 @@ task :install do
     linkables |= Dir.glob(dropbox_conf+'/**/*{.symlink}')
   end
 
-  skip_all = false
+  skip_all = true
   overwrite_all = false
   backup_all = false
 
