@@ -11,11 +11,11 @@ alias bu="bundle update"
 alias bus="bundle update --source"
 alias fs="foreman start"
 
-plugins=(bundler git github osx ruby rails3 rvm sublime)
+plugins=(bundler git osx ruby rails3 sublime)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.rvm/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export EDITOR=subl
 
 cdpath=(~/Code/)
